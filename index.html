@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aletheia Hub: Student Cognitive Twin Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lab-shell">
+        <!-- Left Sidebar Navigation -->
+        <aside class="nav-sidebar">
+            <div class="sidebar-header">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon></svg>
+                <span>Aletheia Hub</span>
+            </div>
+            
+            <nav class="sidebar-links">
+                <button class="nav-btn active" data-target="dashboard">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                    Dashboard
+                </button>
+                <button class="nav-btn" data-target="student-library">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    Student Library
+                </button>
+                <button class="nav-btn" data-target="create-twin">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    Create Cognitive Twin
+                </button>
+                <button class="nav-btn" data-target="brief-builder">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Brief Builder
+                </button>
+                <button class="nav-btn" data-target="brief-analyzer">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    Brief Analyzer
+                </button>
+                <button class="nav-btn" data-target="writing-dna">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2.5 3.19-2.5 5.5h20c0-2.31-1-4.24-2.5-5.5"></path><path d="M12 2v14"></path><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"></path></svg>
+                    Writing DNA
+                </button>
+                <button class="nav-btn" data-target="student-profiles">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                    Student Profiles
+                </button>
+                <button class="nav-btn" data-target="exam-simulator">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Exam Simulator
+                </button>
+                <button class="nav-btn" data-target="student-comparison">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Student Comparison
+                </button>
+                <button class="nav-btn" data-target="professor-review">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    Professor Review
+                </button>
+                <button class="nav-btn" data-target="research-reports">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    Research Reports
+                </button>
+                <button class="nav-btn" data-target="settings">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    Settings
+                </button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="preset-selector-box">
+                    <label>Active Student Twin</label>
+                    <select id="app-student-selector" class="preset-select">
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+            </div>
+        </aside>
+        <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="lab-main">
+            <!-- Header bar -->
+            <header class="lab-header">
+                <div style="display:flex; align-items:center; gap:0.75rem;">
+                    <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div>
+                        <h1 id="page-title">Lab Dashboard</h1>
+                        <p class="subtitle" id="page-subtitle">Overview of Student Cognitive Twin Accuracy</p>
+                    </div>
+                </div>
+                <div class="header-metrics">
+                    <div class="header-metric-badge">
+                        <span>Twin Model Status:</span>
+                        <strong id="match-status-badge" style="color:var(--accent-emerald);">ONLINE</strong>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Tab Content Screens -->
+            <div class="lab-workspace">
+                
+                <!-- 1. DASHBOARD SCREEN -->
+                <div id="screen-dashboard" class="workspace-screen active">
+                    <!-- Dashboard component mounts here -->
+                </div>
+
+                <!-- 2. STUDENT LIBRARY SCREEN -->
+                <div id="screen-student-library" class="workspace-screen">
+                    <!-- StudentLibrary component mounts here -->
+                </div>
+
+                <!-- 3. CREATE COGNITIVE TWIN SCREEN -->
+                <div id="screen-create-twin" class="workspace-screen">
+                    <!-- OnboardingWizard mounts here -->
+                </div>
+
+                <!-- 4. BRIEF BUILDER SCREEN -->
+                <div id="screen-brief-builder" class="workspace-screen">
+                    <!-- BriefEditor mounts here -->
+                </div>
+
+                <!-- 5. BRIEF ANALYZER SCREEN -->
+                <div id="screen-brief-analyzer" class="workspace-screen">
+                    <!-- BriefAnalyzer mounts here -->
+                </div>
+
+                <!-- 6. WRITING DNA SCREEN -->
+                <div id="screen-writing-dna" class="workspace-screen">
+                    <!-- WritingDNA mounts here -->
+                </div>
+
+                <!-- 7. STUDENT PROFILES SCREEN -->
+                <div id="screen-student-profiles" class="workspace-screen">
+                    <!-- ProfileDashboard mounts here -->
+                </div>
+
+                <!-- 8. EXAM SIMULATOR SCREEN -->
+                <div id="screen-exam-simulator" class="workspace-screen">
+                    <!-- Controls Bar -->
+                    <div class="sim-controls-bar">
+                        <div class="btn-group">
+                            <button id="sim-btn-start" class="btn-primary">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                Validate Brief
+                            </button>
+                            <button id="sim-btn-pause" class="btn-secondary" disabled>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                Pause
+                            </button>
+                            <button id="sim-btn-reset" class="btn-secondary" disabled>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+                                Reset
+                            </button>
+                        </div>
+                        
+                        <div class="pressure-toggle-box">
+                            <span>Exam Pressure Mode</span>
+                            <label class="switch">
+                                <input type="checkbox" id="pressure-mode-toggle">
+                                <span class="switch-slider round"></span>
+                            </label>
+                            <span class="warning-light" id="pressure-warning-light"></span>
+                        </div>
+                        
+                        <div class="speed-control">
+                            <span>Simulation Speed:</span>
+                            <input type="range" id="sim-speed-slider" class="speed-slider" min="1" max="5" value="3">
+                            <span id="sim-speed-label">5x</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Question navigation tabs -->
+                    <div class="sim-q-tabs">
+                        <button class="sim-q-tab active" data-simq="0">Q1: WM Conceptual</button>
+                        <button class="sim-q-tab" data-simq="1">Q2: Schema Application</button>
+                        <button class="sim-q-tab" data-simq="2">Q3: Attention Math</button>
+                        <button class="sim-q-tab" data-simq="3">Q4: Unseen Module</button>
+                    </div>
+                    
+                    <div class="sim-q-text-card">
+                        <div class="sim-q-tag" id="sim-q-tag-label">Question 1 of 4</div>
+                        <div class="sim-q-prompt" id="sim-q-prompt-text">Loading question prompt...</div>
+                    </div>
+                    
+                    <!-- Three Column Scripts Workspace -->
+                    <div class="sim-columns-container">
+                        <!-- Column 1: Twin Student Answer -->
+                        <div class="sim-col-panel col-student">
+                            <div class="sim-col-header">
+                                <span class="col-badge badge-student" id="sim-col-student-label">Simulated Twin</span>
+                                <span class="sim-col-words" id="words-student">0 words</span>
+                            </div>
+                            <div class="sim-col-content-wrapper">
+                                <div class="sim-col-content cursor" id="content-student"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Column 2: Brief-Guided AI -->
+                        <div class="sim-col-panel col-brief">
+                            <div class="sim-col-header">
+                                <span class="col-badge badge-brief">Brief-Guided GPT-4</span>
+                                <span class="sim-col-words" id="words-brief">0 words</span>
+                            </div>
+                            <div class="sim-col-content-wrapper">
+                                <div class="sim-col-content cursor" id="content-brief"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Column 3: Control AI -->
+                        <div class="sim-col-panel col-perfect">
+                            <div class="sim-col-header">
+                                <span class="col-badge badge-perfect">Control AI (Ideal GPT-4)</span>
+                                <span class="sim-col-words" id="words-perfect">0 words</span>
+                            </div>
+                            <div class="sim-col-content-wrapper">
+                                <div class="sim-col-content cursor" id="content-perfect"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Dashboard: Dynamic curves & Event Logs -->
+                    <div class="sim-dashboard-footer">
+                        <!-- Curves Graph -->
+                        <div class="sim-dashboard-card card-chart">
+                            <div class="card-header-row">
+                                <h5>Cognitive State Curves</h5>
+                                <div class="legend-row">
+                                    <span class="legend-dot" style="background:#06b6d4;"></span> Attention
+                                    <span class="legend-dot" style="background:#f43f5e;"></span> Fatigue
+                                    <span class="legend-dot" style="background:#a855f7;"></span> Stress
+                                    <span class="legend-dot" style="background:#f59e0b;"></span> Confidence
+                                </div>
+                            </div>
+                            <canvas id="sim-timeline-canvas" style="width: 100%; height: 140px;"></canvas>
+                        </div>
+                        
+                        <!-- Cognitive event terminal -->
+                        <div class="sim-dashboard-card card-terminal">
+                            <h5>Cognitive Events Log</h5>
+                            <div class="terminal-body" id="sim-events-log">
+                                <div class="terminal-line"><span class="term-time">[00:00]</span> Cognitive Engine idle. Waiting for validation test launch...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. STUDENT COMPARISON SCREEN -->
+                <div id="screen-student-comparison" class="workspace-screen">
+                    <!-- Comparison mounts here -->
+                </div>
+
+                <!-- 10. PROFESSOR REVIEW SCREEN -->
+                <div id="screen-professor-review" class="workspace-screen">
+                    <!-- ProfessorReview mounts here -->
+                </div>
+
+                <!-- 11. RESEARCH REPORTS SCREEN -->
+                <div id="screen-research-reports" class="workspace-screen">
+                    <!-- ResearchReports mounts here -->
+                </div>
+
+                <!-- 12. SETTINGS SCREEN -->
+                <div id="screen-settings" class="workspace-screen">
+                    <div class="profile-panel-card" style="max-width:600px; margin: 0 auto;">
+                        <h4>System Settings & Presets</h4>
+                        <p class="card-desc" style="margin-bottom:1.2rem;">Manage the relational localStorage parameters and reset core database structures.</p>
+                        
+                        <div style="display:flex; flex-direction:column; gap:1rem;">
+                            <div class="validation-readiness-banner">
+                                <span>Platform Version:</span>
+                                <strong>Aletheia Hub v4.0 (SaaS Edition)</strong>
+                            </div>
+                            
+                            <div class="validation-readiness-banner">
+                                <span>Data Storage Mode:</span>
+                                <strong>LocalStorage Relational Store</strong>
+                            </div>
+                            
+                            <button id="btn-reset-db" class="btn-primary" style="background:var(--accent-rose); color:#fff; justify-content:center; padding:0.65rem;">
+                                Clear Database & Restore Seeds
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    
+    <!-- Mount Container for Modal dialogs -->
+    <div id="modal-mount"></div>
+
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>

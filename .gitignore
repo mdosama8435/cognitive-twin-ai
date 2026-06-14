@@ -1,0 +1,17 @@
+.system_generated/
+.tempmediaStorage/
+
+*.metadata.json
+
+*.png
+*.webp
+*.jpg
+*.jpeg
+
+node_modules/
+dist/
+
+.env
+.env.local
+
+.vscode/
